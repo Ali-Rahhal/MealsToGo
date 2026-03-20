@@ -1,17 +1,13 @@
-import { StyleSheet, Text, View } from "react-native";
+import { ThemeProvider } from "styled-components/native";
+import { RestaurantsScreen } from "../features/restaurants/screens/restaurants.screen";
+import { theme } from "../infrastructure/theme";
 
 export default function Index() {
   return (
-    <View style={styles.container}>
-      <Text>Our react native blank canvas</Text>
-    </View>
+    <>
+      <ThemeProvider theme={theme}>
+        <RestaurantsScreen />
+      </ThemeProvider>
+    </>
   );
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    justifyContent: "center",
-    alignItems: "center",
-  },
-});
